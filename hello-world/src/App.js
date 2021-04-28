@@ -6,7 +6,13 @@ import Welcome from "./components/Welcome";
 function App() {
   return (
     <div className="App">
-      <Greet />
+      <Greet name="Md. Imran Habib">
+        <p>This is a child element</p>
+      </Greet>
+      <Greet name="Nahidul Islam Prince">
+        <button>Action</button>  
+      </Greet>
+      <Greet name="Hasibul Islam" />
       <Welcome />
     </div>
   );
