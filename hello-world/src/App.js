@@ -13,7 +13,11 @@ function App() {
         <button>Action</button>  
       </Greet>
       <Greet name="Hasibul Islam" />
-      <Welcome />
+      <Welcome name="Md. Saiyem" >
+        <p>This is a child element</p>
+      </Welcome>
+      <Welcome name="Izabuddin" />
+      <Welcome name="Md Zahidul iSlam" />
     </div>
   );
 }
