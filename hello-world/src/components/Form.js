@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Form extends Component {
+class Form extends Component {
     constructor(props) {
         super(props)
     
@@ -35,20 +35,21 @@ export class Form extends Component {
     }
     
     render() {
+        const { username, comments, topic} = this.state
         return (
             <div className='container'>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label>UserName: </label>
-                        <input className='form-control' type='text' value={this.state.username} onChange={this.handleUserNameChange} />
+                        <input className='form-control' type='text' value={username} onChange={this.handleUserNameChange} />
                     </div>
                     <div>
                         <label>Comments: </label>
-                        <textarea value={this.state.comments} onChange={this.handleCommentsChange}></textarea>
+                        <textarea value={comments} onChange={this.handleCommentsChange}></textarea>
                     </div>
                     <div>
                         <label>Topic: </label>
-                        <select value={this.state.topic} onChange={this.handleTopicChange} >
+                        <select value={topic} onChange={this.handleTopicChange} >
                             <option value='react'>React</option>
                             <option value='angular'>Angular</option>
                             <option value='vue'>Vue</option>
